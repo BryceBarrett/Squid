@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainProjectManagerPane" minHeight="640.0" minWidth="1000.0" spacing="10.0" styleClass="backgroundCalamari" stylesheets="@css/projectManager.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cirdles.squid.gui.ProjectManagerController">
+   <children>
+      <HBox translateY="-9.0">
+         <children>
+            <Label fx:id="titleLabel" text="Project &gt; PrawnFile/Manage Spots and Reference Materials &gt; PrawnFile/Manage Sample Naming" />
+         </children>
+      </HBox>
+      <HBox spacing="10.0">
+         <children>
+            <Label text="Project Name:" />
+            <TextField fx:id="projectNameText" prefHeight="27.0" prefWidth="323.0" promptText="Type project name" HBox.hgrow="ALWAYS" />
+            <Label text="Analyst Name:" />
+            <TextField fx:id="analystNameText" prefHeight="27.0" prefWidth="322.0" promptText="Your name" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox spacing="10.0">
+         <children>
+            <Label text="Prawn XML file:" />
+            <TextField fx:id="orignalPrawnFileName" prefHeight="27.0" prefWidth="775.0" promptText="name of selected Prawn XML file will appear here" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Lucida Sans Regular" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <VBox VBox.vgrow="ALWAYS">
+         <children>
+            <Label fx:id="softwareVersionLabel" text="Software Version:" />
+            <Label fx:id="loginCommentLabel" text="Login Comment:" />
+            <Label fx:id="summaryStatsLabel" alignment="TOP_LEFT" text="Summary of analyses, duplicates, species, spots">
+               <VBox.margin>
+                  <Insets bottom="15.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="totalAnalysisTimeLabel" text="Total analysis time in hours">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Notes:" />
+            <AnchorPane VBox.vgrow="ALWAYS">
+               <children>
+                  <TextArea fx:id="projectNotesText" promptText="Type here" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+         <VBox.margin>
+            <Insets left="25.0" right="25.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+</VBox>
